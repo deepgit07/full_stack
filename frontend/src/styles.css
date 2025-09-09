@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-image: linear-gradient(to right, rgb(36, 64, 114), rgb(140, 167, 218));
+}
+
+table {
+    background-color: white
+}
+
+label {
+    color: white
+}
+
+.btn-demo {
+    background-color: rgb(36, 64, 114);
+    color: white
+}

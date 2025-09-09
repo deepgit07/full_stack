@@ -1,0 +1,32 @@
+.infymovie-heading {
+   color: white;
+   text-align: center;
+}
+
+.form-add-movie {
+   background-color: rgb(91, 155, 230)
+}
+
+.error-red {
+   text-align: center;
+   font-size: 22px;
+   color: #dc3545
+}
+
+.error-orange {
+   text-align: center;
+   font-size: 22px;
+   color: rgb(252, 138, 138);
+}
+
+.success-white {
+   color: white;
+   text-align: center;
+   font-size: 22px;
+}
+
+.success-green {
+   color: rgb(54, 153, 170);
+   text-align: center;
+   font-size: 22px;
+}

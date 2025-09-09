@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <h1 class="text-center infymovie-heading">Update Rating</h1>
+    <div *ngIf="successMessage!=null ||successMessage!=undefined" class="alert alert-success alert-dismissible">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      {{successMessage}}
+    </div>
+    <div *ngIf="(errorMessage!=null || errorMessage!=undefined) " class="alert alert-danger alert-dismissible">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      {{errorMessage}}
+    </div>
+    <br>
+    <table id="movies">
+      <thead>
+        <tr>
+          <th>Movie Id</th>
+          <th>Movie Name</th>
+          <th width="30%">Rating</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of movieList">
+          <td>{{i.movieId}}</td>
+          <td>{{i.name}}</td>
+          <td><input class="form-control" [(ngModel)]="i.rating" #rating="ngModel"></td>
+          <td><button class="btn btn-demo" [disabled]="!rating.dirty" (click)="updateRating(i)">Update</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br><br>
+</div>

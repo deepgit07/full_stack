@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-4 offset-4 form-add-movie">
+    <h1 class="infymovie-heading">Add Movie</h1>
+
+    <form class="form" [formGroup]="addMovieForm" (ngSubmit)="addMovie()">
+      <div class="form-group">
+        <label for="movieName">Movie Name :</label>
+        <input type="text" class="form-control" id="movieName" formControlName="name">
+        <span class="text-danger"
+          *ngIf="addMovieForm.controls['name'].invalid && addMovieForm.controls['name'].touched">Please enter the movie
+          name </span>
+      </div>
+      <div class="form-group">
+        <label for="rating">Rating :</label>
+        <input type="number" class="form-control" id="rating" formControlName="rating">
+        <span *ngIf="addMovieForm.controls['rating'].invalid && addMovieForm.controls['rating'].touched">Please enter a
+          rating </span>
+      </div>
+      <div class="col-4 offset-4">
+        <button type="submit" class="btn btn-demo" [disabled]="addMovieForm.invalid">Submit</button>
+      </div>
+    </form>
+
+    <br>
+  </div>
+
+  <div *ngIf="successMessage!=null && errorMessage==null" class="col-12 success-green">{{successMessage}}</div><br>
+  <div *ngIf="successMessage!=null && errorMessage==null" class="col-12 success-white">{{successMessage}}</div><br>
+  <div *ngIf="errorMessage!=null && successMessage==null" class="col-12 error-red">{{errorMessage}}</div>
+  <div *ngIf="errorMessage!=null && successMessage==null" class="col-12 error-orange">{{errorMessage}}</div>
+</div>
